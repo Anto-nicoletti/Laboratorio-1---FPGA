@@ -1,4 +1,0 @@
-library verilog;
-use verilog.vl_types.all;
-entity Multiplicador_con_signo_Block_vlg_vec_tst is
-end Multiplicador_con_signo_Block_vlg_vec_tst;
