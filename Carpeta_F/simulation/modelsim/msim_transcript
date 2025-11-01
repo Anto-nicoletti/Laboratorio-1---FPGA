@@ -1,0 +1,119 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do I2C_maquina_estado_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/toni/Desktop/Proyectos/Carpeta_F/I2C.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity I2C
+# -- Compiling architecture bdf_type of I2C
+# vcom -93 -work work {C:/Users/toni/Desktop/Proyectos/Carpeta_F/Comprardor.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Comprardor
+# -- Compiling architecture SYN of comprardor
+# vcom -93 -work work {C:/Users/toni/Desktop/Proyectos/Carpeta_F/contador7.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity contador7
+# -- Compiling architecture SYN of contador7
+# vcom -93 -work work {C:/Users/toni/Desktop/Proyectos/Carpeta_F/contador_8.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity contador_8
+# -- Compiling architecture SYN of contador_8
+# vcom -93 -work work {C:/Users/toni/Desktop/Proyectos/Carpeta_F/registro7.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity registro7
+# -- Compiling architecture SYN of registro7
+# vcom -93 -work work {C:/Users/toni/Desktop/Proyectos/Carpeta_F/registro8.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity registro8
+# -- Compiling architecture SYN of registro8
+# vcom -93 -work work {C:/Users/toni/Desktop/Proyectos/Carpeta_F/i2c_maquina_estado.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity I2C_maquina_estado
+# -- Compiling architecture BEHAVIOR of I2C_maquina_estado
+# 
+# vcom -93 -work work {C:/Users/toni/Desktop/Proyectos/Carpeta_F/I2C_modelsim.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity I2C_modelsim
+# -- Compiling architecture sim of I2C_modelsim
+# -- Loading entity I2C
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs="+acc"  I2C_modelsim
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps I2C_modelsim 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.i2c_modelsim(sim)
+# Loading work.i2c(bdf_type)
+# Loading work.registro7(syn)
+# Loading ieee.std_logic_arith(body)
+# Loading lpm.lpm_components
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_shiftreg(lpm_syn)
+# Loading work.i2c_maquina_estado(behavior)
+# Loading work.contador7(syn)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_counter(lpm_syn)
+# Loading work.contador_8(syn)
+# Loading work.registro8(syn)
+# Loading work.comprardor(syn)
+# Loading ieee.std_logic_signed(body)
+# Loading lpm.lpm_compare(lpm_syn)
+# Loading lpm.lpm_compare_unsigned(lpm_syn)
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: toni  Hostname: DESKTOP-QLQCISA  ProcessID: 8656
+# 
+#           Attempting to use alternate WLF file "./wlftvthd1d".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftvthd1d
+# 
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /i2c_modelsim/UUT/b2v_inst8/LPM_COMPARE_component/L1/U1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /i2c_modelsim/UUT/b2v_inst8/LPM_COMPARE_component/L1/U1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /i2c_modelsim/UUT/b2v_inst8/LPM_COMPARE_component/L1/U1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /i2c_modelsim/UUT/b2v_inst8/LPM_COMPARE_component/L1/U1
+# Break key hit 
+# Simulation stop requested.
