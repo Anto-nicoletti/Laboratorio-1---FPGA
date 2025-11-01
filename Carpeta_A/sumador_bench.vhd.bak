@@ -1,0 +1,13 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity sumador_bench is
+    port(
+        -- declarás puertos después
+    );
+end entity;
+
+architecture rtl of sumador_bench is
+begin
+    -- lógica después
+end architecture;

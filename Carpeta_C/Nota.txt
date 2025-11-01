@@ -1,0 +1,3 @@
+se puede observar en la imagen "1" (carpeta "captura de pantalla para documentacion) la importancia de coordinar los valores de entrada con los clocks. el multiplicador con signo hara la operacion correspondiente pero si los valores deseados no son los deseados en la llegada del flanco de clock el resultado aunque correcto quizas no sea el deseado.En la imagen "2" se muestra que al tener en cuenta el flanco de colck se obtienen resultados esperados.
+
+Se debe agregar que al poseer el circuito Flip-Flops a la entrada y a la salida la señal sufrira un "delay" entre el valor que se ingreso en su entrada y el resultado esperado a la salida. Siendo este de un ciclo de clock

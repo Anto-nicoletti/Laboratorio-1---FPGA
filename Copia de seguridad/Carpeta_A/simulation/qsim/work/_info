@@ -1,0 +1,243 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/antonio/Proyectos/Carpeta_A/simulation/qsim
+vSumador
+Z1 Izf7jD4=_cWX8J;=I;i7Xo0
+Z2 VD`_JUAE<9[^IAL>62icO42
+Z3 d/home/antonio/Proyectos/Carpeta_A/simulation/qsim
+Z4 w1761427835
+Z5 8Sumador.vo
+Z6 FSumador.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 n@sumador
+Z10 !s100 aebkA1mK8[>PomLbX4Zd>1
+Z11 !s90 -work|work|Sumador.vo|
+Z12 !s108 1761427835.274877
+Z13 !s107 Sumador.vo|
+!i10b 1
+!s85 0
+!s101 -O0
+Esumador
+Z14 w1761441775
+Z15 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
+Z16 DPx10 cycloneiii 20 cycloneiii_atom_pack 0 22 n^46VOjinLK5_01fgQc6Z0
+Z17 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
+Z18 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z19 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z20 DPx10 cycloneiii 21 cycloneiii_components 0 22 VeH8af>S`B?U[[D6_Khe@0
+Z21 dZ:\home\antonio\Proyectos\Carpeta_A\simulation\qsim
+Z22 8Sumador.vho
+Z23 FSumador.vho
+l0
+L34
+Z24 VUR?:hNPLBRUeo4Bn6Vf9C1
+Z25 OV;C;10.1d;51
+31
+Z26 !s108 1761442041.915000
+Z27 !s90 -reportprogress|300|-93|Sumador.vho|
+Z28 !s107 Sumador.vho|
+Z29 o-93 -O0
+Z30 tExplicit 1
+Z31 !s100 i[7]giaGYEXZZYW;YFM_R1
+!i10b 1
+Astructure
+R15
+R16
+R17
+R18
+R19
+R20
+Z32 DEx4 work 7 sumador 0 22 UR?:hNPLBRUeo4Bn6Vf9C1
+l75
+L52
+Z33 VoQcWgM>1:BeU2fV0hLgKm0
+R25
+31
+R26
+R27
+R28
+R29
+R30
+Z34 !s100 0UW3K>JmL]0ik4aOYlmeU1
+!i10b 1
+Esumador_bench
+Z35 w1761438681
+R18
+R19
+R21
+Z36 8/home/antonio/Proyectos/Carpeta_A/sumador_bench.vhd
+Z37 F/home/antonio/Proyectos/Carpeta_A/sumador_bench.vhd
+l0
+L4
+Z38 V`7YJ<Y=FJ1P=B@Jm`_Z3K0
+R25
+31
+Z39 !s108 1761442042.017000
+Z40 !s90 -reportprogress|300|-93|/home/antonio/Proyectos/Carpeta_A/sumador_bench.vhd|
+Z41 !s107 /home/antonio/Proyectos/Carpeta_A/sumador_bench.vhd|
+R29
+R30
+Z42 !s100 2NoK>JkeNlbLOgX@dR]8L2
+!i10b 1
+Artl
+R18
+R19
+Z43 DEx4 work 13 sumador_bench 0 22 `7YJ<Y=FJ1P=B@Jm`_Z3K0
+l18
+L7
+Z44 VSCOlPV4^cRgR3J>4L5WkD1
+R25
+31
+R39
+R40
+R41
+R29
+R30
+Z45 !s100 NI@`aXYW9:UL7c4[X:L?W1
+!i10b 1
+vSumador_vlg_check_tst
+!i10b 1
+!s100 iBUKGK;OOA[EHgKm9;8O50
+IG1Em9aa^IWnV8kI451E6>0
+Z46 VRlQ]Wd?L5>dofL=Sa`bfz0
+Z47 dC:\Users\toni\Desktop\Proyectos\Carpeta_A\simulation\qsim
+Z48 w1761496663
+Z49 8Sumador.vt
+Z50 FSumador.vt
+L0 61
+R7
+r1
+!s85 0
+31
+Z51 !s108 1761496664.563000
+Z52 !s107 Sumador.vt|
+Z53 !s90 -work|work|Sumador.vt|
+!s101 -O0
+R8
+Z54 n@sumador_vlg_check_tst
+vSumador_vlg_sample_tst
+!i10b 1
+!s100 i20:`f:U8IBd8ezCbn3?R3
+IhEfm_g9@l9?Z>Mm_DaZ2g1
+Z55 VCc9m]VJ3UZNIQM^ZF<jz62
+R47
+R48
+R49
+R50
+L0 29
+R7
+r1
+!s85 0
+31
+R51
+R52
+R53
+!s101 -O0
+R8
+Z56 n@sumador_vlg_sample_tst
+vSumador_vlg_vec_tst
+!i10b 1
+!s100 I5n2UXN7?lSG_7zmYi2kU1
+IQWBXkJFeYBEWZ7Q7:UgYY1
+Z57 Vncg?KPTh79UaDPzScYdKT1
+R47
+R48
+R49
+R50
+Z58 L0 183
+R7
+r1
+!s85 0
+31
+R51
+R52
+R53
+!s101 -O0
+R8
+Z59 n@sumador_vlg_vec_tst
+vSumadorBlock1
+Z60 !s100 k?EkM;Q86@^zo<WhmoOJl2
+Z61 IJEJ@1L`V^0N^08ag03VJ50
+Z62 V=SdAZVIS43]6Lmi`bEkTf3
+R47
+Z63 w1761446475
+R5
+R6
+L0 31
+R7
+r1
+31
+R11
+R8
+Z64 n@sumador@block1
+!i10b 1
+!s85 0
+Z65 !s108 1761496664.515000
+R13
+!s101 -O0
+vSumadorBlock1_vlg_check_tst
+Z66 !s100 ;UM5T52UzhEhG=P^e9aIY1
+Z67 IAO<EPZED;8C8?Q>;MkghH0
+Z68 V<ZO:Tod__;n_Ob7X;Jde@3
+R47
+Z69 w1761495886
+R49
+R50
+L0 61
+R7
+r1
+31
+Z70 !s108 1761495887.378000
+Z71 !s107 Sumador.vt|
+R53
+R8
+Z72 n@sumador@block1_vlg_check_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vSumadorBlock1_vlg_sample_tst
+Z73 !s100 L=RJWQ:^LH`0z<YOEljX93
+Z74 I;0E>f6R[f>fL:5d^OEWe[1
+Z75 VOe]alhfN85?_]0;@R1zk62
+R47
+R69
+R49
+R50
+L0 29
+R7
+r1
+31
+R70
+R71
+R53
+R8
+Z76 n@sumador@block1_vlg_sample_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vSumadorBlock1_vlg_vec_tst
+Z77 !s100 7;GVc7f[;@UYQMd[a`SaQ2
+Z78 ILJi23YLI1LO>[H6P@d?]H2
+Z79 VPO3]hM1?JPS^=d3O20MUK1
+R47
+R69
+R49
+R50
+R58
+R7
+r1
+31
+R70
+R71
+R53
+R8
+Z80 n@sumador@block1_vlg_vec_tst
+!i10b 1
+!s85 0
+!s101 -O0

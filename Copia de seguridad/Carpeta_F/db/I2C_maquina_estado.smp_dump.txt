@@ -1,0 +1,8 @@
+
+State Machine - |I2C_maquina_estado|fstate
+Name fstate.guardar_dato fstate.AC fstate.R_W fstate.Guardar_dir fstate.Oscioso 
+fstate.Oscioso 0 0 0 0 0 
+fstate.Guardar_dir 0 0 0 1 1 
+fstate.R_W 0 0 1 0 1 
+fstate.AC 0 1 0 0 1 
+fstate.guardar_dato 1 0 0 0 1 

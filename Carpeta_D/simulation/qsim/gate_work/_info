@@ -1,0 +1,68 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\toni\Desktop\Proyectos\Carpeta_D\simulation\qsim
+Eopcion_multi
+Z1 w1761757586
+Z2 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
+Z3 DPx10 cycloneiii 20 cycloneiii_atom_pack 0 22 n^46VOjinLK5_01fgQc6Z0
+Z4 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
+Z5 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z7 DPx10 cycloneiii 21 cycloneiii_components 0 22 VeH8af>S`B?U[[D6_Khe@0
+Z8 dC:\Users\toni\Desktop\Proyectos\Carpeta_D\simulation\qsim
+Z9 8Opcion_multiplicador.vho
+Z10 FOpcion_multiplicador.vho
+l0
+L34
+VOh?SMHF;_H:3fde`;eB5>1
+Z11 OV;C;10.1d;51
+31
+Z12 !s108 1761757598.282000
+Z13 !s90 -reportprogress|300|-93|-work|work|Opcion_multiplicador.vho|
+Z14 !s107 Opcion_multiplicador.vho|
+Z15 o-93 -work work -O0
+Z16 tExplicit 1
+!s100 kmG8d0K<Omhhz[aQbC[?@1
+!i10b 1
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 12 opcion_multi 0 22 Oh?SMHF;_H:3fde`;eB5>1
+l105
+L64
+Vi>8dP7ZFBlNYl3TiCd2i`0
+R11
+31
+R12
+R13
+R14
+R15
+R16
+!s100 CCLJ`HT8:n8D@o?2bKbk93
+!i10b 1
+Eopcion_multi_bench
+w1761756690
+Z17 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R5
+R6
+R8
+8C:/Users/toni/Desktop/Proyectos/Carpeta_D/Opcion_multiplicador_bench.vhd
+FC:/Users/toni/Desktop/Proyectos/Carpeta_D/Opcion_multiplicador_bench.vhd
+l0
+L5
+VckDfTDHkIFng8QcHZo92_1
+!s100 _Tn3]^fnQT:oieL^8<c>^2
+R11
+31
+!i10b 1
+!s108 1761757598.408000
+!s90 -reportprogress|300|-93|-work|work|C:/Users/toni/Desktop/Proyectos/Carpeta_D/Opcion_multiplicador_bench.vhd|
+!s107 C:/Users/toni/Desktop/Proyectos/Carpeta_D/Opcion_multiplicador_bench.vhd|
+R15
+R16

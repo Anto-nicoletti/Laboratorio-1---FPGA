@@ -1,0 +1,16 @@
+library verilog;
+use verilog.vl_types.all;
+entity Multiplicador_con_signo_Block is
+    port(
+        P0              : out    vl_logic;
+        CLK             : in     vl_logic;
+        B0              : in     vl_logic;
+        A0              : in     vl_logic;
+        P1              : out    vl_logic;
+        B1              : in     vl_logic;
+        A1              : in     vl_logic;
+        P2              : out    vl_logic;
+        P3              : out    vl_logic;
+        NC              : out    vl_logic
+    );
+end Multiplicador_con_signo_Block;

@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\toni\Desktop\Proyectos\Carpeta_C\simulation\qsim
+vMultiplicador_con_signo_Block
+Z1 !s100 C4MmZLRkagZQMQWz2_dBA0
+Z2 IklbCzH;1c>HIc9NQkQWc_0
+Z3 VSgfj8HQ0cDWMjen?iSo:^3
+Z4 dC:\Users\toni\Desktop\Proyectos\Carpeta_C\simulation\qsim
+Z5 w1761691683
+Z6 8Multiplicador_con_signo.vo
+Z7 FMultiplicador_con_signo.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|Multiplicador_con_signo.vo|
+Z10 o-work work -O0
+Z11 n@multiplicador_con_signo_@block
+!i10b 1
+!s85 0
+Z12 !s108 1761691684.398000
+Z13 !s107 Multiplicador_con_signo.vo|
+!s101 -O0
+vMultiplicador_con_signo_Block_vlg_check_tst
+!i10b 1
+!s100 1FjX3n7iN>YFfUad3iIeE1
+IzB;Ff6AoHhb?6V>11c8<22
+Z14 Vo4GfZ9oUgLWB?Xc2>ZERo3
+R4
+Z15 w1761691681
+Z16 8Multiplicador_con_signo.vt
+Z17 FMultiplicador_con_signo.vt
+L0 65
+R8
+r1
+!s85 0
+31
+Z18 !s108 1761691684.555000
+Z19 !s107 Multiplicador_con_signo.vt|
+Z20 !s90 -work|work|Multiplicador_con_signo.vt|
+!s101 -O0
+R10
+Z21 n@multiplicador_con_signo_@block_vlg_check_tst
+vMultiplicador_con_signo_Block_vlg_sample_tst
+!i10b 1
+Z22 !s100 S[59eSOQUX:o3zc`>2BOG0
+Z23 Iiom<X0E>?6_C5n7mUU]Jo3
+Z24 VPh^HMXQY9fZ96Pk_SQcoK0
+R4
+R15
+R16
+R17
+L0 29
+R8
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R10
+Z25 n@multiplicador_con_signo_@block_vlg_sample_tst
+vMultiplicador_con_signo_Block_vlg_vec_tst
+!i10b 1
+!s100 PDM9V7MXB4BRUGggFfm?H0
+I2n7FYQOXeW>MAEcUnnc>g1
+Z26 V?S>9K4kjV7]SkRLabhV1O1
+R4
+R15
+R16
+R17
+L0 246
+R8
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R10
+Z27 n@multiplicador_con_signo_@block_vlg_vec_tst

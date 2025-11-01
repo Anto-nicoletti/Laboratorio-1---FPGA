@@ -1,0 +1,1 @@
+la simulacion de quartus temporal no interpreta bien signed y unsigned, debo utilizar la simulacion de modelSim

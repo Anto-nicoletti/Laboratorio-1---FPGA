@@ -1,0 +1,25 @@
+|I2C_maquina_estado
+reset => reg_fstate.Oscioso.OUTPUTSELECT
+reset => reg_fstate.Guardar_dir.OUTPUTSELECT
+reset => reg_fstate.R_W.OUTPUTSELECT
+reset => reg_fstate.AC.OUTPUTSELECT
+reset => reg_fstate.guardar_dato.OUTPUTSELECT
+reset => ack.OUTPUTSELECT
+reset => hab_dir.OUTPUTSELECT
+reset => hab_dat.OUTPUTSELECT
+clock => fstate~1.DATAIN
+sda => Selector0.IN1
+sda => Selector1.IN1
+fin_dir => process_1.IN0
+fin_dir => process_1.IN0
+fin_dir => reg_fstate.OUTPUTSELECT
+fin_dir => reg_fstate.OUTPUTSELECT
+soy => process_1.IN1
+soy => process_1.IN1
+fin_dato => Selector0.IN3
+fin_dato => Selector2.IN2
+ack <= ack.DB_MAX_OUTPUT_PORT_TYPE
+hab_dir <= hab_dir.DB_MAX_OUTPUT_PORT_TYPE
+hab_dat <= hab_dat.DB_MAX_OUTPUT_PORT_TYPE
+
+

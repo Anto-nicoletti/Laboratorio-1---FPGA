@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="I2C_maquina_estado">
+		<CBX_INST_ENTRY INSTANCE_NAME="|I2C|Comprardor:b2v_inst8|lpm_compare:LPM_COMPARE_component" CBX_FILE_NAME="cmpr_lkg.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|I2C|contador7:b2v_inst11|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_2vj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|I2C|contador_8:b2v_inst12|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_tki.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

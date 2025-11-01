@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\toni\Desktop\Proyectos\Carpeta_D\simulation\qsim
+vopcion_multi
+Z1 !s100 63dCoG>KG=e]QOdIkYb[f1
+Z2 ILRVoj>;GiC8C8So?FU@>X1
+Z3 Va?A^FGl<cV`PS_hgdm3G<2
+Z4 dC:\Users\toni\Desktop\Proyectos\Carpeta_D\simulation\qsim
+Z5 w1761755772
+Z6 8Opcion_multiplicador.vo
+Z7 FOpcion_multiplicador.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|Opcion_multiplicador.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1761755772.630000
+Z12 !s107 Opcion_multiplicador.vo|
+!s101 -O0
+vopcion_multi_vlg_check_tst
+!i10b 1
+Z13 !s100 _:PmjfERim?EKWhQ;@R<Z1
+Z14 I`R>5UBFZo1miehSk2oe@?0
+Z15 V7E2P?U46df]bIGS_SZ2Z_3
+R4
+Z16 w1761755771
+Z17 8Opcion_multiplicador.vt
+Z18 FOpcion_multiplicador.vt
+L0 63
+R8
+r1
+!s85 0
+31
+Z19 !s108 1761755772.695000
+Z20 !s107 Opcion_multiplicador.vt|
+Z21 !s90 -work|work|Opcion_multiplicador.vt|
+!s101 -O0
+R10
+vopcion_multi_vlg_sample_tst
+!i10b 1
+Z22 !s100 ^miC=<NCia<JbfN_F0dP43
+Z23 IXl^M?Z1Ofd0oC`Q3ZPD`30
+Z24 V?m=XRCkU3ii0ZSH1ZZAdl0
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vopcion_multi_vlg_vec_tst
+!i10b 1
+Z25 !s100 S^CJfO>:cNcQTQP?<^WBf0
+Z26 Ih>[KB>fQS5K>i;[IoI:ZA3
+Z27 V>_N2zlcaOn5je5hLPMoJ:1
+R4
+R16
+R17
+R18
+Z28 L0 220
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
