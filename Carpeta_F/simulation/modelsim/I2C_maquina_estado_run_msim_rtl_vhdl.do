@@ -5,7 +5,7 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vcom -93 -work work {C:/Users/toni/Desktop/Proyectos/Carpeta_F/I2C.vhd}
+vcom -93 -work work {C:/Users/toni/Desktop/Proyectos/Carpeta_F/I2C_2.vhd}
 vcom -93 -work work {C:/Users/toni/Desktop/Proyectos/Carpeta_F/Comprardor.vhd}
 vcom -93 -work work {C:/Users/toni/Desktop/Proyectos/Carpeta_F/contador7.vhd}
 vcom -93 -work work {C:/Users/toni/Desktop/Proyectos/Carpeta_F/contador_8.vhd}

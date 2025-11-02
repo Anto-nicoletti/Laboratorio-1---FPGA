@@ -15,7 +15,7 @@ L42
 VKEkNm3VAL_>@b_4jSd2543
 Z7 OV;C;10.1d;51
 31
-Z8 !s108 1762015546.542000
+Z8 !s108 1762041714.966000
 Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/toni/Desktop/Proyectos/Carpeta_F/Comprardor.vhd|
 Z10 !s107 C:/Users/toni/Desktop/Proyectos/Carpeta_F/Comprardor.vhd|
 Z11 o-93 -work work -O0
@@ -50,7 +50,7 @@ L42
 V1]?[:=RdmaKKAemT=K9c^0
 R7
 31
-Z16 !s108 1762015546.605000
+Z16 !s108 1762041715.028000
 Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/toni/Desktop/Proyectos/Carpeta_F/contador7.vhd|
 Z18 !s107 C:/Users/toni/Desktop/Proyectos/Carpeta_F/contador7.vhd|
 R11
@@ -85,7 +85,7 @@ L42
 VbK4gAYH?bQYifX=ZAloKB2
 R7
 31
-Z22 !s108 1762015546.689000
+Z22 !s108 1762041715.075000
 Z23 !s90 -reportprogress|300|-93|-work|work|C:/Users/toni/Desktop/Proyectos/Carpeta_F/contador_8.vhd|
 Z24 !s107 C:/Users/toni/Desktop/Proyectos/Carpeta_F/contador_8.vhd|
 R11
@@ -108,32 +108,32 @@ R11
 R12
 !s100 _9ISn;aRimSchzSI`^6Df1
 !i10b 1
-Ei2c
-Z25 w1762006787
+Ei2c_2
+Z25 w1762038255
 R2
 R3
 R4
-Z26 8C:/Users/toni/Desktop/Proyectos/Carpeta_F/I2C.vhd
-Z27 FC:/Users/toni/Desktop/Proyectos/Carpeta_F/I2C.vhd
+Z26 8C:/Users/toni/Desktop/Proyectos/Carpeta_F/I2C_2.vhd
+Z27 FC:/Users/toni/Desktop/Proyectos/Carpeta_F/I2C_2.vhd
 l0
 L24
-Vg@T2lfTU1=6OD`9RMmCMj3
+VeB`Dz;aoCWA^o;kf[4Xi=1
 R7
 31
-Z28 !s108 1762015546.479000
-Z29 !s90 -reportprogress|300|-93|-work|work|C:/Users/toni/Desktop/Proyectos/Carpeta_F/I2C.vhd|
-Z30 !s107 C:/Users/toni/Desktop/Proyectos/Carpeta_F/I2C.vhd|
+Z28 !s108 1762041714.919000
+Z29 !s90 -reportprogress|300|-93|-work|work|C:/Users/toni/Desktop/Proyectos/Carpeta_F/I2C_2.vhd|
+Z30 !s107 C:/Users/toni/Desktop/Proyectos/Carpeta_F/I2C_2.vhd|
 R11
 R12
-!s100 =g68f0X_MfLQXCVPm;>JJ0
+!s100 ]bU`j5Y3G2Y7iJcmjGU[l1
 !i10b 1
 Abdf_type
 R2
 R3
-Z31 DEx4 work 3 i2c 0 22 g@T2lfTU1=6OD`9RMmCMj3
-l105
-L41
-VoT;[6K5=BLeGzC?a_;OJz3
+Z31 DEx4 work 5 i2c_2 0 22 eB`Dz;aoCWA^o;kf[4Xi=1
+l114
+L46
+Vf`=f8<0fT6j`M2c^mb?W;0
 R7
 31
 R28
@@ -141,7 +141,7 @@ R29
 R30
 R11
 R12
-!s100 :eb:4o;0c;GFzQ]6CWUP20
+!s100 ndC=MXDR;^Y3dEVV_AIa]1
 !i10b 1
 Ei2c_maquina_estado
 Z32 w1762005220
@@ -155,7 +155,7 @@ L21
 VaG^cWBF?lNa9XIeMkjmbF1
 R7
 31
-Z35 !s108 1762015546.870000
+Z35 !s108 1762041715.247000
 Z36 !s90 -reportprogress|300|-93|-work|work|C:/Users/toni/Desktop/Proyectos/Carpeta_F/i2c_maquina_estado.vhd|
 Z37 !s107 C:/Users/toni/Desktop/Proyectos/Carpeta_F/i2c_maquina_estado.vhd|
 R11
@@ -179,7 +179,7 @@ R12
 !s100 4Tl6?j<SdD0hYleLo_98M0
 !i10b 1
 Ei2c_modelsim
-Z38 w1762014524
+Z38 w1762041704
 R2
 R3
 R4
@@ -192,7 +192,7 @@ ViY8YDVcegcWEZ7G50Nz^C3
 R7
 31
 !i10b 1
-Z41 !s108 1762015546.932000
+Z41 !s108 1762041715.294000
 Z42 !s90 -reportprogress|300|-93|-work|work|C:/Users/toni/Desktop/Proyectos/Carpeta_F/I2C_modelsim.vhd|
 Z43 !s107 C:/Users/toni/Desktop/Proyectos/Carpeta_F/I2C_modelsim.vhd|
 R11
@@ -202,10 +202,10 @@ R31
 R2
 R3
 DEx4 work 12 i2c_modelsim 0 22 iY8YDVcegcWEZ7G50Nz^C3
-l30
+l33
 L10
-VA_[R1UV^4bTZ[XQiMCQ:[0
-!s100 if=UPT[V>=MZg@L;We0W30
+V;6L4lTzBE<be@akoQRZO]1
+!s100 kjnlDn_OTKT;lQJKCL`SW0
 R7
 31
 !i10b 1
@@ -226,7 +226,7 @@ L42
 V6W4zlA7lGo=7M2GHNSJ^>3
 R7
 31
-Z47 !s108 1762015546.746000
+Z47 !s108 1762041715.139000
 Z48 !s90 -reportprogress|300|-93|-work|work|C:/Users/toni/Desktop/Proyectos/Carpeta_F/registro7.vhd|
 Z49 !s107 C:/Users/toni/Desktop/Proyectos/Carpeta_F/registro7.vhd|
 R11
@@ -261,7 +261,7 @@ L42
 VkXnaWR];T596h0]S=nP8h3
 R7
 31
-Z53 !s108 1762015546.805000
+Z53 !s108 1762041715.187000
 Z54 !s90 -reportprogress|300|-93|-work|work|C:/Users/toni/Desktop/Proyectos/Carpeta_F/registro8.vhd|
 Z55 !s107 C:/Users/toni/Desktop/Proyectos/Carpeta_F/registro8.vhd|
 R11

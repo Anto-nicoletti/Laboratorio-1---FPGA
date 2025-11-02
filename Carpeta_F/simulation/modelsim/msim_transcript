@@ -10,13 +10,13 @@
 # ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vcom -93 -work work {C:/Users/toni/Desktop/Proyectos/Carpeta_F/I2C.vhd}
+# vcom -93 -work work {C:/Users/toni/Desktop/Proyectos/Carpeta_F/I2C_2.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity I2C
-# -- Compiling architecture bdf_type of I2C
+# -- Compiling entity I2C_2
+# -- Compiling architecture bdf_type of I2C_2
 # vcom -93 -work work {C:/Users/toni/Desktop/Proyectos/Carpeta_F/Comprardor.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -67,7 +67,7 @@
 # -- Loading package std_logic_1164
 # -- Compiling entity I2C_modelsim
 # -- Compiling architecture sim of I2C_modelsim
-# -- Loading entity I2C
+# -- Loading entity I2C_2
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs="+acc"  I2C_modelsim
 # vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps I2C_modelsim 
@@ -75,7 +75,7 @@
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading work.i2c_modelsim(sim)
-# Loading work.i2c(bdf_type)
+# Loading work.i2c_2(bdf_type)
 # Loading work.registro7(syn)
 # Loading ieee.std_logic_arith(body)
 # Loading lpm.lpm_components
@@ -97,10 +97,10 @@
 # 
 #           File in use by: toni  Hostname: DESKTOP-QLQCISA  ProcessID: 8656
 # 
-#           Attempting to use alternate WLF file "./wlftvthd1d".
+#           Attempting to use alternate WLF file "./wlftey1213".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftvthd1d
+#           Using alternate file: ./wlftey1213
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
@@ -115,5 +115,7 @@
 #    Time: 0 ps  Iteration: 0  Instance: /i2c_modelsim/UUT/b2v_inst8/LPM_COMPARE_component/L1/U1
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Instance: /i2c_modelsim/UUT/b2v_inst8/LPM_COMPARE_component/L1/U1
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/toni/Desktop/Proyectos/Carpeta_F/simulation/modelsim/wave.do
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/toni/Desktop/Proyectos/Carpeta_F/simulation/modelsim/wave.do
 # Break key hit 
 # Simulation stop requested.

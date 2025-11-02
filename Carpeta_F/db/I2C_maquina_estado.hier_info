@@ -1,6 +1,6 @@
 |I2C
-SCL => SYNTHESIZED_WIRE_11.IN1
-SCL => SYNTHESIZED_WIRE_12.IN1
+SCL => SYNTHESIZED_WIRE_17.IN1
+SCL => SYNTHESIZED_WIRE_18.IN1
 SDA => i2c_maquina_estado:b2v_inst.sda
 SDA => registro7:b2v_inst13.shiftin
 SDA => registro8:b2v_inst14.shiftin
