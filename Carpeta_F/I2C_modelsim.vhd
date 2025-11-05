@@ -9,23 +9,24 @@ END I2C_modelsim;
 
 ARCHITECTURE sim OF I2C_modelsim IS
 
-	 SIGNAL Contador2_mod8 : STD_LOGIC;
-	 SIGNAL Contador1_mod7 : STD_LOGIC;
-	 SIGNAL dire : STD_LOGIC_VECTOR(6 DOWNTO 0);
-	 SIGNAL Esclavo : STD_LOGIC_VECTOR(6 DOWNTO 0);
-	 SIGNAL soy : STD_LOGIC;
 	 SIGNAL reset: STD_LOGIC := '0';
 	 SIGNAL Reset_registro : STD_LOGIC := '0';
     SIGNAL Clock_registro: STD_LOGIC := '0';
     SIGNAL CARGA_DIRECCION: STD_LOGIC := '0';	 
- 	 SIGNAL clock : STD_LOGIC := '0';
 	 SIGNAL SCL : STD_LOGIC := '0';
-    SIGNAL SDA : STD_LOGIC := '0';
-    SIGNAL ACK : STD_LOGIC;
+    SIGNAL SDA : STD_LOGIC := '1';
+	 SIGNAL	ack : STD_LOGIC;
+	 SIGNAL hab_dat : STD_LOGIC;
+	 SIGNAL hab_dir : STD_LOGIC;
+	 SIGNAL	fin_dir : STD_LOGIC;
+	 SIGNAL	SOY :  STD_LOGIC;
+	 SIGNAL	fin_dato :  STD_LOGIC;
+	 SIGNAL	DIRE :  STD_LOGIC_VECTOR(6 DOWNTO 0);
+	 SIGNAL	Esclavo : STD_LOGIC_VECTOR(6 DOWNTO 0);
     SIGNAL DATA : STD_LOGIC_VECTOR(7 DOWNTO 0);
 
 	 -- esto es para cargar la direccion del esclavo, solo para la simulacion, a fines de probar si se puede cargar la direccion en el esclavo 
-    CONSTANT DIR : STD_LOGIC_VECTOR(6 DOWNTO 0) := "1010001";
+    CONSTANT DIR : STD_LOGIC_VECTOR(6 DOWNTO 0) := "0110001";
 	 
 	 -- esto es el dato que el maesto carga en el esclavo
 	 CONSTANT DIR2 : STD_LOGIC_VECTOR(7 DOWNTO 0) := "01011101";
@@ -34,24 +35,25 @@ BEGIN
 	
 	UUT: entity work.I2C_2
         PORT MAP (
+		  
 		  reset => reset,
 		  Reset_registro => Reset_registro, 
 		  Clock_registro => Clock_registro,
         CARGA_DIRECCION => CARGA_DIRECCION,
-		  clock => clock,
 		  SCL => SCL,
         SDA => SDA,
-        ACK => ACK,
-        DATA => DATA,
-		  Esclavo => Esclavo, 
-		  dire => dire,
-		  soy => soy,
-		  Contador2_mod8 => Contador2_mod8,
-		  Contador1_mod7 => Contador1_mod7
+		  ack => ack,
+		  hab_dat => hab_dat,
+		  hab_dir => hab_dir,
+		  fin_dir =>fin_dir,
+		  SOY => SOY,
+		  fin_dato => fin_dato,
+		  DIRE => DIRE,
+		  Esclavo => Esclavo,
+        DATA => DATA 
 		  );
 		  
 
-		  
      Reinicio_grabado: process
      BEGIN
         --- 1) Reset inicial para simular que se carga una direccion en el esclavo y tambien reseteamos todo la maquina y registros
@@ -72,69 +74,75 @@ BEGIN
 		END LOOP;
         -- *** Esperamos 30ns antes de empezar I2C ***
         wait for 30 ns;
-
         wait; -- se queda corriendo la simulación
      end process;
 		  
-		  
-	  -- Clock principal interno de la maquina de estado
-     clk_proc: process
+
+			  -- Clock principal interno de la maquina de estado
+     SCL_proc: process
      begin
         -- con esto el clock se mantiene desactivadp durante la carga de la direccion
         wait for 400 ns; 
         -- Recién ahora empieza el clock real
         loop
-            clock <= '1'; wait for 30 ns;
-            clock <= '0'; wait for 30 ns;
+            SCL <= '0'; wait for 40 ns;
+            SCL <= '1'; wait for 40 ns;
         end loop;
      end process;
 	 
-   
+ 
+   maestro_proc : process
+   begin
+      -------------------------------------------------
+      -- Esperamos a que la dirección interna del esclavo ya esté cargada
+      -------------------------------------------------
+      wait for 400 ns;   -- justo después de que empieza el clock I2C real
 
-  escritura_maestro: process  
-    begin
-        wait for 390 ns;  -- Espera a que empiece SCL y clock
-		   SDA <= '1';      -- START REAL (SDA baja mientras SCL está 1)
-			wait until rising_edge(clock);
-			wait until rising_edge(clock);
-			SDA <= '0';      -- START REAL (SDA baja mientras SCL está 1)
-			wait until rising_edge(clock);
+      wait until rising_edge(SCL); 
+		wait for 10 ns;
+		SDA <= '0';
+		   wait until rising_edge(SCL);
+	-- Enviar direccion 
+         
+		  SDA <= '0';     
+        wait for 10 ns;
+		  SDA <= '1';     
+        wait until rising_edge(SCL);
 
-        -- Enviar direccion
-        FOR i IN 6 DOWNTO 0 LOOP
-            SDA <= DIR(i);     -- pongo el bit en la línea
-            wait until rising_edge(SCL); -- pulso de clock SCL del maestro
-        END LOOP;
+		  SDA <= '1';     
+       wait for 10 ns;
 
+		  SDA <= '1';     
+        wait until rising_edge(SCL);
+
+		  SDA <= '0';     
+        wait until rising_edge(SCL);
+		  wait for 20 ns;
 		  
-		  if ACK = '1' then
+		   SDA <= '0';     
+        wait until rising_edge(SCL);
+
+		  SDA <= '0';     
+        wait until rising_edge(SCL);
+		  
+		  SDA <= '1';     
+        wait until rising_edge(SCL);
+
+
     -- enviar dato
-	 		  wait until rising_edge(clock);
-			 wait until rising_edge(clock);
+
+wait until rising_edge(SCL);
 			 FOR i IN 7 DOWNTO 0 LOOP
+			 wait until rising_edge(SCL);
 				  SDA <= DIR2(i);     -- pongo el bit en la línea
-				  wait until rising_edge(SCL);
+
 			 END LOOP;
-			end if;
+
+
       
 
 
-        wait; -- se queda corriendo la simulación
-    end process;
 
-
-
-
-	-- Clock I2C esto es lo que envia el maestro(para la comunicación posterior)
-     clk_scl : process
-     begin
-        -- SCL quieto durante la carga
-        wait until rising_edge(SDA);
-        -- Ahora sí, empieza el clock I2C
-        loop
-				SCL <= '1'; wait for 20 ns;
-            SCL <= '0'; wait for 10 ns;
-        end loop;
-     end process;
-
+      wait; -- detener proceso
+   end process;
 END sim;

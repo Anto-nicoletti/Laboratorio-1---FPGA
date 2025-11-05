@@ -1,0 +1,9 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all; 
+
+LIBRARY work;
+
+ENTITY I2C_modelsim IS
+end I2C_modelsim;
+
+ 

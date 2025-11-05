@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone III"
 set_global_assignment -name DEVICE EP3C120F780C7
-set_global_assignment -name TOP_LEVEL_ENTITY I2C
+set_global_assignment -name TOP_LEVEL_ENTITY bloque_maquina_estado
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "19:48:52  OCTOBER 30, 2025"
 set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
@@ -64,10 +64,4 @@ set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_
 set_global_assignment -name VHDL_FILE I2C_2.vhd
 set_global_assignment -name VHDL_FILE I2C_modelsim.vhd
 set_global_assignment -name VHDL_FILE I2C.vhd
-set_global_assignment -name SMF_FILE I2C_maquina_estado.smf
 set_global_assignment -name BDF_FILE bloque_maquina_estado.bdf
-set_global_assignment -name QIP_FILE Comprardor.qip
-set_global_assignment -name QIP_FILE contador7.qip
-set_global_assignment -name QIP_FILE contador_8.qip
-set_global_assignment -name QIP_FILE registro7.qip
-set_global_assignment -name QIP_FILE registro8.qip

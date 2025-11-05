@@ -1,22 +1,23 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
-add wave -noupdate /i2c_modelsim/Contador2_mod8
-add wave -noupdate /i2c_modelsim/Contador1_mod7
-add wave -noupdate /i2c_modelsim/dire
-add wave -noupdate /i2c_modelsim/Esclavo
-add wave -noupdate /i2c_modelsim/soy
 add wave -noupdate /i2c_modelsim/reset
 add wave -noupdate /i2c_modelsim/Reset_registro
 add wave -noupdate /i2c_modelsim/Clock_registro
 add wave -noupdate /i2c_modelsim/CARGA_DIRECCION
-add wave -noupdate /i2c_modelsim/clock
 add wave -noupdate /i2c_modelsim/SCL
 add wave -noupdate /i2c_modelsim/SDA
-add wave -noupdate /i2c_modelsim/ACK
+add wave -noupdate /i2c_modelsim/ack
+add wave -noupdate /i2c_modelsim/hab_dat
+add wave -noupdate /i2c_modelsim/hab_dir
+add wave -noupdate /i2c_modelsim/fin_dir
+add wave -noupdate /i2c_modelsim/SOY
+add wave -noupdate /i2c_modelsim/fin_dato
+add wave -noupdate /i2c_modelsim/DIRE
+add wave -noupdate /i2c_modelsim/Esclavo
 add wave -noupdate /i2c_modelsim/DATA
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {350039 ps} 1} {{Cursor 2} {857357 ps} 0}
-quietly wave cursor active 2
+WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+quietly wave cursor active 0
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100
 configure wave -justifyvalue left
@@ -31,4 +32,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {365781 ps} {1030855 ps}
+WaveRestoreZoom {0 ps} {498 ps}

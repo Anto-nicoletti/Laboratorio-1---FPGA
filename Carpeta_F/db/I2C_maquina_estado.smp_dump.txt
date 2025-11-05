@@ -1,5 +1,5 @@
 
-State Machine - |I2C|I2C_maquina_estado:b2v_inst|fstate
+State Machine - |bloque_maquina_estado|I2C_maquina_estado:inst|fstate
 Name fstate.guardar_dato fstate.AC fstate.R_W fstate.Guardar_dir fstate.Oscioso 
 fstate.Oscioso 0 0 0 0 0 
 fstate.Guardar_dir 0 0 0 1 1 

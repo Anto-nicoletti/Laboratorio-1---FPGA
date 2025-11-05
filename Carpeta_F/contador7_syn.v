@@ -33,53 +33,11 @@
 //applicable agreement for further details.
 
 
-//lpm_counter DEVICE_FAMILY="Cyclone III" lpm_direction="UP" lpm_modulus=7 lpm_port_updown="PORT_UNUSED" lpm_width=3 aclr clock cout q
+//lpm_counter DEVICE_FAMILY="Cyclone III" lpm_direction="UP" lpm_port_updown="PORT_UNUSED" lpm_width=3 aclr clock cout q
 //VERSION_BEGIN 13.0 cbx_cycloneii 2013:06:12:18:03:43:SJ cbx_lpm_add_sub 2013:06:12:18:03:43:SJ cbx_lpm_compare 2013:06:12:18:03:43:SJ cbx_lpm_counter 2013:06:12:18:03:43:SJ cbx_lpm_decode 2013:06:12:18:03:43:SJ cbx_mgl 2013:06:12:18:05:10:SJ cbx_stratix 2013:06:12:18:03:43:SJ cbx_stratixii 2013:06:12:18:03:43:SJ  VERSION_END
 // synthesis VERILOG_INPUT_VERSION VERILOG_2001
 // altera message_off 10463
 
-
-
-//lpm_add_sub DEVICE_FAMILY="Cyclone III" LPM_DIRECTION="ADD" LPM_REPRESENTATION="UNSIGNED" LPM_WIDTH=3 ONE_INPUT_IS_CONSTANT="YES" USE_WYS="OPERATORS" cout dataa datab result
-//VERSION_BEGIN 13.0 cbx_cycloneii 2013:06:12:18:03:43:SJ cbx_lpm_add_sub 2013:06:12:18:03:43:SJ cbx_mgl 2013:06:12:18:05:10:SJ cbx_stratix 2013:06:12:18:03:43:SJ cbx_stratixii 2013:06:12:18:03:43:SJ  VERSION_END
-
-
-//lpm_compare DEVICE_FAMILY="Cyclone III" LPM_WIDTH=3 ONE_INPUT_IS_CONSTANT="YES" aeb dataa datab
-//VERSION_BEGIN 13.0 cbx_cycloneii 2013:06:12:18:03:43:SJ cbx_lpm_add_sub 2013:06:12:18:03:43:SJ cbx_lpm_compare 2013:06:12:18:03:43:SJ cbx_mgl 2013:06:12:18:05:10:SJ cbx_stratix 2013:06:12:18:03:43:SJ cbx_stratixii 2013:06:12:18:03:43:SJ  VERSION_END
-
-//synthesis_resources = 
-//synopsys translate_off
-`timescale 1 ps / 1 ps
-//synopsys translate_on
-module  contador7_cmpr
-	( 
-	aeb,
-	dataa,
-	datab) /* synthesis synthesis_clearbox=1 */;
-	output   aeb;
-	input   [2:0]  dataa;
-	input   [2:0]  datab;
-`ifndef ALTERA_RESERVED_QIS
-// synopsys translate_off
-`endif
-	tri0   [2:0]  dataa;
-	tri0   [2:0]  datab;
-`ifndef ALTERA_RESERVED_QIS
-// synopsys translate_on
-`endif
-
-	wire  [0:0]  aeb_result_wire;
-	wire  [0:0]  aneb_result_wire;
-	wire  [7:0]  data_wire;
-	wire  eq_wire;
-
-	assign
-		aeb = eq_wire,
-		aeb_result_wire = (~ aneb_result_wire),
-		aneb_result_wire = (data_wire[0] | data_wire[1]),
-		data_wire = {datab[2], dataa[2], datab[1], dataa[1], datab[0], dataa[0], (data_wire[6] ^ data_wire[7]), ((data_wire[2] ^ data_wire[3]) | (data_wire[4] ^ data_wire[5]))},
-		eq_wire = aeb_result_wire;
-endmodule //contador7_cmpr
 
 //synthesis_resources = lut 3 reg 3 
 //synopsys translate_off
@@ -103,85 +61,121 @@ module  contador7_cntr
 // synopsys translate_on
 `endif
 
+	wire  [0:0]   wire_counter_comb_bita_0combout;
+	wire  [0:0]   wire_counter_comb_bita_1combout;
+	wire  [0:0]   wire_counter_comb_bita_2combout;
+	wire  [0:0]   wire_counter_comb_bita_0cout;
+	wire  [0:0]   wire_counter_comb_bita_1cout;
+	wire  [0:0]   wire_counter_comb_bita_2cout;
+	wire	[2:0]	wire_counter_reg_bit_d;
+	wire	[2:0]	wire_counter_reg_bit_asdata;
 	reg	[2:0]	counter_reg_bit;
 	wire	[2:0]	wire_counter_reg_bit_ena;
-	wire	[3:0]	wire_add_sub1_result_int;
-	wire	wire_add_sub1_cout;
-	wire	[2:0]	wire_add_sub1_dataa;
-	wire	[2:0]	wire_add_sub1_datab;
-	wire	[2:0]	wire_add_sub1_result;
-	wire  wire_cmpr2_aeb;
+	wire	[2:0]	wire_counter_reg_bit_sload;
 	wire  aclr_actual;
-	wire  [2:0]  add_sub_one_w;
-	wire  [2:0]  add_value_w;
 	wire clk_en;
 	wire cnt_en;
-	wire  compare_result;
 	wire  cout_actual;
-	wire  [2:0]  current_reg_q_w;
-	wire  custom_cout_w;
-	wire  [2:0]  modulus_bus;
-	wire  modulus_trigger;
-	wire  [2:0]  modulus_trigger_value_w;
+	wire [2:0]  data;
+	wire  external_cin;
+	wire  [2:0]  s_val;
 	wire  [2:0]  safe_q;
+	wire sclr;
+	wire sload;
+	wire sset;
 	wire  time_to_clear;
-	wire  [2:0]  trigger_mux_w;
 	wire  updown_dir;
 
+	cycloneiii_lcell_comb   counter_comb_bita_0
+	( 
+	.cin(external_cin),
+	.combout(wire_counter_comb_bita_0combout[0:0]),
+	.cout(wire_counter_comb_bita_0cout[0:0]),
+	.dataa(counter_reg_bit[0]),
+	.datab(updown_dir),
+	.datad(1'b1),
+	.datac(1'b0)
+	);
+	defparam
+		counter_comb_bita_0.lut_mask = 16'h5A90,
+		counter_comb_bita_0.sum_lutc_input = "cin",
+		counter_comb_bita_0.lpm_type = "cycloneiii_lcell_comb";
+	cycloneiii_lcell_comb   counter_comb_bita_1
+	( 
+	.cin(wire_counter_comb_bita_0cout[0:0]),
+	.combout(wire_counter_comb_bita_1combout[0:0]),
+	.cout(wire_counter_comb_bita_1cout[0:0]),
+	.dataa(counter_reg_bit[1]),
+	.datab(updown_dir),
+	.datad(1'b1),
+	.datac(1'b0)
+	);
+	defparam
+		counter_comb_bita_1.lut_mask = 16'h5A90,
+		counter_comb_bita_1.sum_lutc_input = "cin",
+		counter_comb_bita_1.lpm_type = "cycloneiii_lcell_comb";
+	cycloneiii_lcell_comb   counter_comb_bita_2
+	( 
+	.cin(wire_counter_comb_bita_1cout[0:0]),
+	.combout(wire_counter_comb_bita_2combout[0:0]),
+	.cout(wire_counter_comb_bita_2cout[0:0]),
+	.dataa(counter_reg_bit[2]),
+	.datab(updown_dir),
+	.datad(1'b1),
+	.datac(1'b0)
+	);
+	defparam
+		counter_comb_bita_2.lut_mask = 16'h5A90,
+		counter_comb_bita_2.sum_lutc_input = "cin",
+		counter_comb_bita_2.lpm_type = "cycloneiii_lcell_comb";
 	// synopsys translate_off
 	initial
 		counter_reg_bit[0:0] = 0;
 	// synopsys translate_on
 	always @ ( posedge clock or  posedge aclr_actual)
 		if (aclr_actual == 1'b1) counter_reg_bit[0:0] <= 1'b0;
-		else if  (wire_counter_reg_bit_ena[0:0] == 1'b1)   counter_reg_bit[0:0] <= trigger_mux_w[0:0];
+		else if  (wire_counter_reg_bit_ena[0:0] == 1'b1) 
+			if (wire_counter_reg_bit_sload[0:0] == 1'b1) counter_reg_bit[0:0] <= wire_counter_reg_bit_asdata[0:0];
+			else  counter_reg_bit[0:0] <= wire_counter_reg_bit_d[0:0];
 	// synopsys translate_off
 	initial
 		counter_reg_bit[1:1] = 0;
 	// synopsys translate_on
 	always @ ( posedge clock or  posedge aclr_actual)
 		if (aclr_actual == 1'b1) counter_reg_bit[1:1] <= 1'b0;
-		else if  (wire_counter_reg_bit_ena[1:1] == 1'b1)   counter_reg_bit[1:1] <= trigger_mux_w[1:1];
+		else if  (wire_counter_reg_bit_ena[1:1] == 1'b1) 
+			if (wire_counter_reg_bit_sload[1:1] == 1'b1) counter_reg_bit[1:1] <= wire_counter_reg_bit_asdata[1:1];
+			else  counter_reg_bit[1:1] <= wire_counter_reg_bit_d[1:1];
 	// synopsys translate_off
 	initial
 		counter_reg_bit[2:2] = 0;
 	// synopsys translate_on
 	always @ ( posedge clock or  posedge aclr_actual)
 		if (aclr_actual == 1'b1) counter_reg_bit[2:2] <= 1'b0;
-		else if  (wire_counter_reg_bit_ena[2:2] == 1'b1)   counter_reg_bit[2:2] <= trigger_mux_w[2:2];
+		else if  (wire_counter_reg_bit_ena[2:2] == 1'b1) 
+			if (wire_counter_reg_bit_sload[2:2] == 1'b1) counter_reg_bit[2:2] <= wire_counter_reg_bit_asdata[2:2];
+			else  counter_reg_bit[2:2] <= wire_counter_reg_bit_d[2:2];
 	assign
-		wire_counter_reg_bit_ena = {3{(clk_en & cnt_en)}};
+		wire_counter_reg_bit_asdata = ({3{(~ sclr)}} & (({3{sset}} & s_val) | ({3{(~ sset)}} & data))),
+		wire_counter_reg_bit_d = {wire_counter_comb_bita_2combout[0:0], wire_counter_comb_bita_1combout[0:0], wire_counter_comb_bita_0combout[0:0]};
 	assign
-		wire_add_sub1_result_int = wire_add_sub1_dataa + wire_add_sub1_datab;
-	assign
-		wire_add_sub1_result = wire_add_sub1_result_int[2:0],
-		wire_add_sub1_cout = wire_add_sub1_result_int[3:3];
-	assign
-		wire_add_sub1_dataa = current_reg_q_w,
-		wire_add_sub1_datab = add_value_w;
-	contador7_cmpr   cmpr2
-	( 
-	.aeb(wire_cmpr2_aeb),
-	.dataa(safe_q),
-	.datab(modulus_bus));
+		wire_counter_reg_bit_ena = {3{(clk_en & (((sclr | sset) | sload) | cnt_en))}},
+		wire_counter_reg_bit_sload = {3{((sclr | sset) | sload)}};
 	assign
 		aclr_actual = aclr,
-		add_sub_one_w = wire_add_sub1_result,
-		add_value_w = 3'b001,
 		clk_en = 1'b1,
 		cnt_en = 1'b1,
-		compare_result = wire_cmpr2_aeb,
 		cout = cout_actual,
-		cout_actual = (custom_cout_w | (time_to_clear & updown_dir)),
-		current_reg_q_w = counter_reg_bit,
-		custom_cout_w = (wire_add_sub1_cout & add_value_w[0]),
-		modulus_bus = 3'b110,
-		modulus_trigger = cout_actual,
-		modulus_trigger_value_w = ({3{(~ updown_dir)}} & modulus_bus),
+		cout_actual = (wire_counter_comb_bita_2cout[0:0] | (time_to_clear & updown_dir)),
+		data = {3{1'b0}},
+		external_cin = 1'b1,
 		q = safe_q,
+		s_val = {3{1'b1}},
 		safe_q = counter_reg_bit,
-		time_to_clear = compare_result,
-		trigger_mux_w = (({3{(~ modulus_trigger)}} & add_sub_one_w) | ({3{modulus_trigger}} & modulus_trigger_value_w)),
+		sclr = 1'b0,
+		sload = 1'b0,
+		sset = 1'b0,
+		time_to_clear = 1'b0,
 		updown_dir = 1'b1;
 endmodule //contador7_cntr
 //VALID FILE
@@ -227,8 +221,8 @@ endmodule
 // Retrieval info: PRIVATE: CarryOut NUMERIC "1"
 // Retrieval info: PRIVATE: Direction NUMERIC "0"
 // Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "Cyclone III"
-// Retrieval info: PRIVATE: ModulusCounter NUMERIC "1"
-// Retrieval info: PRIVATE: ModulusValue NUMERIC "7"
+// Retrieval info: PRIVATE: ModulusCounter NUMERIC "0"
+// Retrieval info: PRIVATE: ModulusValue NUMERIC "0"
 // Retrieval info: PRIVATE: SCLR NUMERIC "0"
 // Retrieval info: PRIVATE: SLOAD NUMERIC "0"
 // Retrieval info: PRIVATE: SSET NUMERIC "0"
@@ -238,7 +232,6 @@ endmodule
 // Retrieval info: PRIVATE: new_diagram STRING "1"
 // Retrieval info: LIBRARY: lpm lpm.lpm_components.all
 // Retrieval info: CONSTANT: LPM_DIRECTION STRING "UP"
-// Retrieval info: CONSTANT: LPM_MODULUS NUMERIC "7"
 // Retrieval info: CONSTANT: LPM_PORT_UPDOWN STRING "PORT_UNUSED"
 // Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_COUNTER"
 // Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "3"
@@ -251,7 +244,7 @@ endmodule
 // Retrieval info: CONNECT: cout 0 0 0 0 @cout 0 0 0 0
 // Retrieval info: CONNECT: q 0 0 3 0 @q 0 0 3 0
 // Retrieval info: GEN_FILE: TYPE_NORMAL contador7.vhd TRUE
-// Retrieval info: GEN_FILE: TYPE_NORMAL contador7.inc FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL contador7.inc TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL contador7.cmp TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL contador7.bsf TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL contador7_inst.vhd TRUE
